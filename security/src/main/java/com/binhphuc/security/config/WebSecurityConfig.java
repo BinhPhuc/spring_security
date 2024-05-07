@@ -27,7 +27,8 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(request -> {
                     request
                             .requestMatchers(
-                                    "api/v1/login"
+                                    "api/v1/login",
+                                    "api/v1/register"
                             ).permitAll()
                             .anyRequest().authenticated();
                 })
